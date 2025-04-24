@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Yashirin video</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background-color: #f0f0f0;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+        }
+        #error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Videoni ko‘rish uchun parol kiriting:</h2>
+    <input type="password" id="password" placeholder="Parol">
+    <button onclick="checkPassword()">Kirish</button>
+    <div id="error"></div>
+
+    <script>
+        function checkPassword() {
+            var correctPassword = "4444";
+            var userPassword = document.getElementById("password").value;
+
+            if (userPassword === correctPassword) {
+                window.location.href = "https://drive.google.com/file/d/1H3B2r_MRUVUDGK3qeaJPgugx3VXETwoM/view?usp=drivesdk";
+            } else {
+                document.getElementById("error").innerText = "Noto‘g‘ri parol. Iltimos, yana urinib ko‘ring.";
+            }
+        }
+    </script>
+</body>
+</html>
